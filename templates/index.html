@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rainfall Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="input.html">Go to Input Page</a></li>
+        </ul>
+    </nav>
+    <h1>Rainfall Data by District</h1>
+    <div class="data-container">
+        {% for district, rainfall in district_rainfall.items() %}
+            <div class="card">
+                <h2>{{ district }}</h2>
+                <p>{{ rainfall }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

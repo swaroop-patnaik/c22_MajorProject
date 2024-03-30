@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission Output</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You for Your Submission!</h1>
+        <p>Your details have been submitted successfully.</p>
+        <div id="output">
+            <h2>Submission Details</h2>
+            <p><strong>District Name:</strong> <span id="district-name">N/A</span></p>
+            <p><strong>Crop Being Grown:</strong> <span id="crop">N/A</span></p>
+            <p><strong>Loan Amount Taken:</strong> <span id="loan-amount">N/A</span></p>
+            <p><strong>Land Area under Cultivation:</strong> <span id="land-area">N/A</span></p>
+            <p><strong>Crop Expected Yield:</strong> <span id="exp-yield">N/A</span></p>
+            <p><strong>Expected Income:</strong> <span id="exp-income">N/A</span></p>
+            <p><strong>Final Profits:</strong> <span id="fin-profits">N/A</span></p>
+            <p><strong>Final Verdict:</strong> <span id="fin-verdict">N/A</span></p>
+
+        </div>
+        <a href="input.html">Go Back to Form</a>
+
+        {{ prediction_text }}
+
+        
+    </div>
+    <script>
+        // Example script to populate fields if you were to use localStorage for demo purposes
+        document.getElementById('district-name').textContent = localStorage.getItem('districtName') || 'N/A';
+        document.getElementById('crop').textContent = localStorage.getItem('crop') || 'N/A';
+        document.getElementById('loan-amount').textContent = localStorage.getItem('loanAmount') || 'N/A';
+        document.getElementById('land-area').textContent = localStorage.getItem('landArea') || 'N/A';
+        document.getElementById('exp-yield').textContent = localStorage.getItem('expYield') || 'N/A';
+        document.getElementById('exp-income').textContent = localStorage.getItem('expIncome') || 'N/A';
+        document.getElementById('fin-profits').textContent = localStorage.getItem('finProfits') || 'N/A';
+        document.getElementById('fin-verdict').textContent = localStorage.getItem('finVerdict') || 'N/A';
+    </script>
+</body>
+</html>
